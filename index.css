@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+/* SECTIONS */
+
+body {
+    margin: auto;
+}
+
+form {
+    margin: auto;
+}
+
+/* CLASSES */
+
+.group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1;
+    margin: auto;
+}
+
+.double {
+    flex: 2;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* IDS */
+
+/* TYPOGRAPHY */
+
+h1, p, a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (min-width: 600px) {
+
+}
