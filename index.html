@@ -9,14 +9,30 @@
 </head>
 
 <body>
-    <h1>What's in your fridge?</h1>
-    <!-- RANDOM RECIPE OF THE DAY GOES BELOW -->
-<!--    <section class="group" id="js-random-daily-recipe"></section> -->
-    <form>
-        <label for="js-recipe-search"> Search:</label>
-        <input type="text" name="recipe-search" id="js-recipe-search" placeholder="chicken" autofocus required />
-        <input type="submit" id="submit">
-    </form>
+    <header>
+        <h1>Find a recipe</h1> 
+        <nav>
+            <form>
+                <div class="item">
+                    <label for="js-recipe-search">Search by recipe: </label>
+                    <input type="text" name="recipe" id="js-recipe-search" placeholder="baked ziti" autofocus />
+                </div>
+                <div class="item">
+                    <label for="js-ingredient-search"> or by ingredient(s): </label>
+                    <input type="text" name="ingredient" id="js-ingredient-search" placeholder="cheese" />
+                </div>
+                <div class="item">
+                    <input type="submit" class="submit" id="submit">
+                </div>    
+            </form>
+        </nav>    
+    </header>
+
+    <article id="js-recipe-o-day">
+        <h2>Recipe of the day</h2>
+        <div class="daily-recipe-group" id="js-random-daily-recipe">
+    </article>
+    
     <section class="hidden" id="js-recipe-results-container">
         <div class="group" id="js-recipe-results"></div>
     </section>

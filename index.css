@@ -5,53 +5,255 @@
 /* SECTIONS */
 
 body {
-    margin: auto;
+    background-color: #757575;
+    margin: 0px;
 }
 
+article, section {
+    padding: 20px;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FF5733;
+}
+
+/* nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    position: relative;
+    align-content: space-between;
+    justify-content: space-evenly;
+} */
+
 form {
-    margin: auto;
+    display: flex;
+    margin: 0px;
+}
+
+img {
+    width: 100%;
+    min-width: 120px;
+    max-width: 240px;
+    max-height: 240px;
+    margin: 0 auto;
+}
+
+.dailyrecipe img {
+    float: right;
 }
 
 /* CLASSES */
 
+.daily-recipe-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    margin: 0px;
+}
+
 .group {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    margin: 0px;
+}
+
+.recipe-result {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: #999999;
+    padding: 5px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.item, .double, article, section, .dailyrecipe {
+    margin: 0px;
+    padding: 10px;
+    position: relative;
     flex-wrap: wrap;
 }
 
-.item {
+.item, .dailyrecipe {
     flex: 1;
-    margin: auto;
+    padding: 20px;
 }
 
 .double {
     flex: 2;
-    margin: auto;
 }
 
 .hidden {
     display: none;
 }
 
-/* IDS */
+.submit {
+    color: #FFF;
+    background: #000;
+    padding: 3px;
+    border-radius: 3px;
+    margin-top: 17px;
+    text-align: center;
+}
 
 /* TYPOGRAPHY */
 
-h1, p, a {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+h1, h2, h3, h4, p, a, li, label {
+    font-family: 'Optima', 'Lucida';
     color: black;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 42px;
+    text-align: center;
+    margin: 0px;
+    padding-left: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.dailyrecipe h3 {
+    text-align: right;
+}
+
+.dailyrecipe a {
+    text-align: right;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+p, a, li {
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:link    { color: #FF5733; }
+a:visited { color: #006600; }
+a:hover   { color: #333399; }
+a:active  { color: #FFFFFF; }
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding-inline-start: 0px;
+}
+
+li {
+    margin: 0px;
+}
+
+hr {
+    margin-top: 30px;
+}
+
+article hr {
+    border: none;
+}
+
+label {
+    text-align: center;
 }
 
 /* MEDIA QUERIES */
 
-@media all and (min-width: 600px) {
+@media all and (max-width: 750px) {
+    /* SECTIONS */
+
+    article, section {
+        padding: 0px;
+    }
+    
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* CLASSES */ 
+
+    .group, .recipe-result {
+        flex-direction: column;
+    }
+
+    .recipe-result {
+        padding: 5px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .item {
+        padding: 5px;
+    }
+
+    .dailyrecipe {
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .submit {
+        margin-top: 0px;
+    }
+
+    /* TYPOGRAPHY */
+
+    h1 {
+        font-size: 36px;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        line-height: 12px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 25px;
+    }
 
 }
