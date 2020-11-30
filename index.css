@@ -22,14 +22,10 @@ header {
     background-color: #FF5733;
 }
 
-/* nav {
-    display: flex;
-    flex-direction: row;
+nav {
+    width: auto;
     margin: 0px;
-    position: relative;
-    align-content: space-between;
-    justify-content: space-evenly;
-} */
+}
 
 form {
     display: flex;
@@ -125,6 +121,7 @@ h1 {
     text-align: center;
     margin: 0px;
     padding-left: 50px;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -186,7 +183,47 @@ label {
 
 /* MEDIA QUERIES */
 
+
 @media all and (max-width: 750px) {
+    /* SECTIONS */
+
+    form .item {
+        padding-right: 10px;
+    }
+
+    /* CLASSES */
+    
+    .item, .dailyrecipe {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .daily-recipe-group {
+        align-items: flex-start;
+    }
+
+    /* TYPOGRAPHY */
+
+    h1 {
+        font-size: 32px;
+        padding-top: 10px;
+        padding-left: 10px;
+        line-height: 32px;
+    }
+
+    h2 {
+        margin: 10px 0 10px 0;
+    }
+
+    h3 {
+        margin: 5px 0 5px 0;
+    }
+
+}
+
+@media all and (max-width: 450px) {
     /* SECTIONS */
 
     article, section {
