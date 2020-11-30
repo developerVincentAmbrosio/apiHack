@@ -76,19 +76,7 @@ function displayRandomRecipeOfTheDay(responseJson) {
 function displayResults(responseJson) {
     console.log(responseJson);
     $('#js-recipe-results').empty();
-    for (let i = 0; i < responseJson.results.length; i++) {
-        
-        // let recipeIngredients = responseJson.results[i].ingredients.split(",");
-        // let ingredientList = "";
-
-        // recipeIngredients.forEach((ingredient,i) => {
-        //     ingredientList += `<li>${ingredient}</li>` 
-        // })
-
-        //GOES UNDER THE LINK:
-        //<h4>Ingredients: </h4>
-        //<ul>${ingredientList}</ul>
-        
+    for (let i = 0; i < responseJson.results.length; i++) {        
         $('#js-recipe-results').append(`
             <div class="recipe-result">
                 <div class="item">
@@ -98,7 +86,7 @@ function displayResults(responseJson) {
                     <h3>${responseJson.results[i].title}</h3>
                     <a href="${responseJson.results[i].href}" target="_blank">link to recipe</a>
                     <p><b>Ingredients:</b> ${responseJson.results[i].ingredients}</p>
-                <div>    
+                </div>    
             </div>
         `) 
 };  
@@ -120,17 +108,3 @@ $(function() {
     submitFormListner();
     getRandomRecipeData();
 });
-
-// fetch("https://recipe-puppy.p.rapidapi.com/?p=1&i=onions%2Cgarlic&q=omelet", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-key": "65ecb5ffaamshaec6ef4d281b1d8p126c8fjsn4e72a949ea28",
-// 		"x-rapidapi-host": "recipe-puppy.p.rapidapi.com"
-// 	}
-// })
-// .then(response => {
-// 	console.log(response);
-// })
-// .catch(err => {
-// 	console.error(err);
-// });
